@@ -1,0 +1,173 @@
+:root {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-image: repeating-linear-gradient(to top left, #ff000064, #beaf0870, #00ff005a, #00ffff4d, #ff00ff50);
+  background-size: 200% 200%;
+  animation: abstract 55s linear infinite;
+  position: relative;
+  overflow: hidden;
+  -webkit-animation: abstract 55s linear infinite;
+}
+
+@keyframes abstract {
+  0% {
+    background-position: left top;
+  }
+  25% {
+    background-position: top right;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  75% {
+    background-position: bottom left;
+  }
+  100% {
+    background-position: left top;
+  }
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.4em 1em;
+  font-size: 1em;
+  font-weight: 500;
+  opacity: 0.9;
+  color: #257ca5;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  background: linear-gradient(to right, #bdbdbd89, #d8d8d851, #bdbdbd89);
+  cursor: pointer;
+  border: 1px solid rgb(138, 138, 138);
+  transition: background-color 0.35s;
+  -webkit-transition: background-color 0.35s;
+  -moz-transition: background-color 0.35s;
+  -ms-transition: background-color 0.35s;
+  -o-transition: background-color 0.35s;
+}
+button:hover {
+  background-color: #257ca5;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.title {
+  font-size: 100px;
+  font-weight: bold;
+  color: #ffffff;
+  opacity: 0.4;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  text-shadow: #1a1a1a 5px 5px 1px;
+}
+
+.container {
+  /*background-color: rgb(37, 124, 165);*/
+  background-color: rgba(37, 124, 165, 0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: repeating-linear-gradient( to left, #ffffff60,   #00000051 2px  );
+}
+
+.input {
+  width: 85%;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  gap: 1vw;
+}
+
+.list {
+  /*background-color: rgb(213, 213, 213);*/
+  background-color: rgba(213, 213, 213, 0.6);
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  padding: 10px;
+  border: 1px solid rgb(138, 138, 138);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.task {
+  border: 1px solid rgb(138, 138, 138);
+  background-color: rgba(213, 213, 213, 0.5);
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 17px;
+  display: flex;
+  padding-left: 13px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text::first-letter {
+  text-transform: uppercase;
+}
+
+.add {
+  width: 150px;
+
+}
+
+.text {
+  font-weight: bold;
+  filter: blur(0.3px);
+  text-stroke: 0.35px rgb(0, 0, 0);
+  -webkit-text-stroke: 0.35px rgb(0, 0, 0);
+  color: white;
+  text-transform: capitalize;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  -webkit-filter: blur(0.3px);
+}
+
+.false {
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -ms-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+}
+
+.task:focus-within {
+  background: linear-gradient(to left,    #ffffff00,    #e8e8e8, #ffffff00);
+}
